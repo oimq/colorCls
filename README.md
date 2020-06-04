@@ -55,5 +55,4 @@ white
 
 ### Notices
 
-###### Unauthorized distribution and commercial use is strictly prohibited 
-###### without the permission of the original author and the related module.
+###### Unauthorized distribution and commercial use is strictly prohibited without the permission of the original author and the related module.
