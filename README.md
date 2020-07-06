@@ -38,17 +38,28 @@ Those data available only permitted person, please contact to taep0q@gmail.com
 ```code
 from colorCls import colorCls
 
-ccls = colorCls(<color_dict_path>)
-print(ccls.rgb4LABEL((255,255,255)))
-print(ccls.rgb2LABEL('white'))
-print(ccls.percentage(<img>))
+if __name__=='__main__' :
+    CLR_PATH = './color_hsv_upper.json'
+    IMG_PATH = './sample.jpg'
+
+    clr = colorCls(CLR_PATH, model='hsv')
+    print("* Label of RGB 255, 255, 255 : {}".format(clr.rgb4LABEL('white')))
+    print("* RGB Value of white : {}".format(clr.rgb2LABEL((255,255,255))))
+
+    # Newly add : HSV Aggregation Algorithms
+    print("- Color RGB 255, 0, 4 to HSV : {}".format(clr.rgb_to_hsv(255, 0, 4)))
+    print("- Getting Percentage of a sample image\n{}".format(
+        clr.percentage(IMG_PATH, resize=True, cform='bgr')))
 ```
 
 * Output
 ```code
-white
-(255, 255, 255)
-{'white':0.79322, 'gray':'0.23521', ...}
+* Label of RGB 255, 255, 255 : (0, 0, 240)
+* RGB Value of white : yellow
+- Color RGB 255, 0, 4 to HSV : (255, 255, 255)
+100%|██████████████████████████████████| 6700/6700 [00:00<00:00, 36725.79it/s]
+- Getting Percentage of a sample image
+([('yellowgray', 0.32402985074626867), ('white', 0.17477611940298507), ... )])
 ```
 
 ***

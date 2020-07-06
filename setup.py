@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='colorCls',
-      version=1.2,
+      version=2.0,
       author='oimq',
       url='https://github.com/oimq/colorCls',
       author_email='taep0q@gmail.com',
