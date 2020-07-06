@@ -18,7 +18,20 @@ colorCls have three major functions
 
 * rgb2LABEL : RGB color is converted to label.
 
-* percentage : Shows percent of RGB color compositions.
+* percentage : Shows percent of RGB or HSV color compositions(proportions).
+
+* rgb_to_hsv : Convert rgb value to hsv value
+
+<br/>
+
+The HSV positioning equation
+
+![](https://latex.codecogs.com/svg.latex?x%20=%20s*cos(h*\pi/127.5)*v/255)
+
+![](https://latex.codecogs.com/svg.latex?y%20=%20s*sin(h*\pi/127.5)*v/255)
+
+![](https://latex.codecogs.com/svg.latex?z=v)
+
 
 ***
 
